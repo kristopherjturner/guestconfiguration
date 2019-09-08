@@ -1,0 +1,34 @@
+{
+    "properties": {
+        "displayName": "[Audit] CCE-37166-6 - Password History Size.",
+        "policyType": "Custom",
+        "mode": "All",
+        "description": "Ensure Enforce password history is set to...",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "policyRule": {
+            "if": {
+                "allOf": [
+                    {
+                        "field": "type",
+                        "equals": "Microsoft.GuestConfiguration/guestConfigurationAssignments"
+                    },
+                    {
+                        "field": "name",
+                        "equals": "PasswordHistorySize"
+                    },
+                    {
+                        "field": "Microsoft.GuestConfiguration/guestConfigurationAssignments/complianceStatus",
+                        "notEquals": "Compliant"
+                    }
+                ]
+            },
+            "then": {
+                "effect": "audit"
+            }
+        }
+    },
+    "id": "/providers/Microsoft.Authorization/policyDefinitions/dabfb608-97ce-48b4-b6df-47380b129812",
+    "name": "dabfb608-97ce-48b4-b6df-47380b129812"
+}
