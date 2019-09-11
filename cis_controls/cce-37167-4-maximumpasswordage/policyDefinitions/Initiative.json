@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CCE-37167-4 - Maximum Password Age.",
+        "policyType": "Custom",
+        "description": "Ensure Maximum Password Age is set to...",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ca1caab7-9c89-43d3-95c4-35bd6888d4eb",
+                "policyDefinitionReferenceId": "Deploy_MaximumPasswordAge",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/d7520491-4f89-4a44-99e6-0f974b7e017e",
+                "policyDefinitionReferenceId": "Audit_MaximumPasswordAge"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/0f9074d8-c4cb-412d-be4f-9fae0192fd9c",
+    "name": "0f9074d8-c4cb-412d-be4f-9fae0192fd9c"
+}

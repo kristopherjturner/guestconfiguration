@@ -10,23 +10,24 @@ ConvertFrom-GPO -Path '.\Windows 10 Version 1903 and Windows Server Version 1903
 #  https://docs.microsoft.com/en-us/azure/governance/policy/how-to/guest-configuration-create
 
 
-New-GuestConfigurationPackage -Name PasswordHistorySize -Configuration C:\BaselineManagement\PasswordHistorySize\PasswordHistorySize.mof -DestinationPath C:\BaselineManagement\PasswordHistorySize\ -Verbose
+
+New-GuestConfigurationPackage -Name MaximumPasswordAge -Configuration C:\GitHub\guestconfiguration\cis_controls\cce-37167-4-maximumpasswordage\cce-37167-4-maximumpasswordage.mof -Path C:\GitHub\guestconfiguration\cis_controls\cce-37167-4-maximumpasswordage\ -Verbose
 
 #  Upload to Storage or use github
 # Uploaded file to blob and get SAS uri
-c:\git\policyfiles\storageupload.ps1 -resourceGroup rfc_customguestconfig -storageAccountName guestconfiguration -storageContainerName content -filePath c:\git\policyfiles\Server2019Baseline\Server2019Baseline.zip -blobName Server2019Baseline.zip
+C:\GitHub\guestconfiguration\scripts\storageupload.ps1 -resourceGroup rfc_customguestconfig -storageAccountName guestconfiguration -storageContainerName content -filePath c:\git\policyfiles\Server2019Baseline\Server2019Baseline.zip -blobName Server2019Baseline.zip
 
 
 New-GuestConfigurationPolicy `
-    -ContentUri "https://guestconfiguration.blob.core.windows.net/content/PasswordHistorySize.zip" `
-    -DisplayName "CCE-37166-6 - Password History Size." `
-    -Description "Ensure Enforce password history is set to..." `
-    -DestinationPath "C:\BaselineManagement\PasswordHistorySize\policyDefinitions" `
+    -ContentUri "https://guestconfiguration.blob.core.windows.net/content/MaximumPasswordAge.zip" `
+    -DisplayName "CCE-37167-4 - Maximum Password Age." `
+    -Description "Ensure Maximum Password Age is set to..." `
+    -Path "C:\GitHub\guestconfiguration\cis_controls\cce-37167-4-maximumpasswordage\policyDefinitions" `
     -Platform "Windows" `
     -Version 1.0.0 `
     -Verbose
 
 
-Publish-GuestConfigurationPolicy -Path 'C:\BaselineManagement\PasswordHistorySize\policyDefinitions' -Verbose
+Publish-GuestConfigurationPolicy -Path 'C:\GitHub\guestconfiguration\cis_controls\cce-37167-4-maximumpasswordage\policyDefinitions' -Verbose
 
 
