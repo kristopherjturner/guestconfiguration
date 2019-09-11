@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CCE-36286-3 - Clear Text Password.",
+        "policyType": "Custom",
+        "description": "This policy setting determines whether the operating system stores passwords in a way that uses reversible encryption.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6cab62fb-ad68-4c82-858a-968e40a4965d",
+                "policyDefinitionReferenceId": "Deploy_ClearTextPassword",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/22098d74-6fb9-4cae-a517-25619929ab5b",
+                "policyDefinitionReferenceId": "Audit_ClearTextPassword"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/c3326c80-7583-4907-8004-52ee3ac05ca4",
+    "name": "c3326c80-7583-4907-8004-52ee3ac05ca4"
+}

@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CCE-37073-4 - Minimum Password Age.",
+        "policyType": "Custom",
+        "description": "This policy setting determines the number of days that you must use a password before you can change it.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/aa36385d-6a43-4892-a89c-2507e6dd0790",
+                "policyDefinitionReferenceId": "Deploy_MinimumPasswordAge",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a55946e9-ca1f-4a13-ac48-9c43457d6058",
+                "policyDefinitionReferenceId": "Audit_MinimumPasswordAge"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/88822f25-7bfb-42ba-aa51-42e5c629e59c",
+    "name": "88822f25-7bfb-42ba-aa51-42e5c629e59c"
+}

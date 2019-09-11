@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CCE-36534-6 - Minimum Password Length.",
+        "policyType": "Custom",
+        "description": "This policy setting determines the least number of characters that make up a password for a user account.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c1c96309-1c2a-49e5-abfc-2ac52317888e",
+                "policyDefinitionReferenceId": "Deploy_MinimumPasswordLength",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/740c506b-4558-4a33-93e6-d77de642591a",
+                "policyDefinitionReferenceId": "Audit_MinimumPasswordLength"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/129c428d-892b-40e4-b9c0-9bd6947b7c5e",
+    "name": "129c428d-892b-40e4-b9c0-9bd6947b7c5e"
+}

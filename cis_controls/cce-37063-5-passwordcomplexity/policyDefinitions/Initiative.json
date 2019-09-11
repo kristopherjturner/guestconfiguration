@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CCE-37063-5 - Password Complexity Requirements.",
+        "policyType": "Custom",
+        "description": "This policy setting checks all new passwords to ensure that they meet basic requirements for strong passwords.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6d4b0b4d-1efd-4fa6-a961-a0672915b74f",
+                "policyDefinitionReferenceId": "Deploy_PasswordComplexity",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/59094811-537b-46f6-aaa7-35b56e088266",
+                "policyDefinitionReferenceId": "Audit_PasswordComplexity"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/78591729-1051-422b-99ee-7a48a82b6013",
+    "name": "78591729-1051-422b-99ee-7a48a82b6013"
+}

@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CCE-37034-6 - Account Lockout Duration.",
+        "policyType": "Custom",
+        "description": "This policy setting determines the length of time that must pass before a locked account is unlocked and a user can try to log on again.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/05dce246-b457-4a5c-8da6-a02a77374530",
+                "policyDefinitionReferenceId": "Deploy_LockoutDuration",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3d255d8f-fc52-4c5e-8282-cb51cb802c97",
+                "policyDefinitionReferenceId": "Audit_LockoutDuration"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/d8bfe9bd-0083-469b-a260-313d739bb55a",
+    "name": "d8bfe9bd-0083-469b-a260-313d739bb55a"
+}

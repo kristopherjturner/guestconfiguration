@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CCE-36883-7 - Reset Account Lockout Counter.",
+        "policyType": "Custom",
+        "description": "This policy setting determines the length of time before the Account lockout threshold resets to zero.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/502ea5ec-09d1-4ef6-bc4e-62a3a93ff513",
+                "policyDefinitionReferenceId": "Deploy_ResetLockoutCount",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1e339ff4-166d-47f1-a3a0-4875e6c6db1b",
+                "policyDefinitionReferenceId": "Audit_ResetLockoutCount"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/5ab2796e-b3fa-4465-853c-09cb3e5006fc",
+    "name": "5ab2796e-b3fa-4465-853c-09cb3e5006fc"
+}

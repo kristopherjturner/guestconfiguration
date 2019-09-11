@@ -1,0 +1,34 @@
+{
+    "properties": {
+        "displayName": "[Audit] CCE-36008-1 - Account Lockout Threshold.",
+        "policyType": "Custom",
+        "mode": "All",
+        "description": "This policy setting determines the number of failed logon attempts before the account is locked.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "policyRule": {
+            "if": {
+                "allOf": [
+                    {
+                        "field": "type",
+                        "equals": "Microsoft.GuestConfiguration/guestConfigurationAssignments"
+                    },
+                    {
+                        "field": "name",
+                        "equals": "AccountLockoutThreshold"
+                    },
+                    {
+                        "field": "Microsoft.GuestConfiguration/guestConfigurationAssignments/complianceStatus",
+                        "notEquals": "Compliant"
+                    }
+                ]
+            },
+            "then": {
+                "effect": "audit"
+            }
+        }
+    },
+    "id": "/providers/Microsoft.Authorization/policyDefinitions/16b88c27-c8fe-4092-88b3-b0579df1b933",
+    "name": "16b88c27-c8fe-4092-88b3-b0579df1b933"
+}
