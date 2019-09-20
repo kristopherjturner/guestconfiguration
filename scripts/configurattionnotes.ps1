@@ -30,4 +30,4 @@ New-GuestConfigurationPolicy `
 
 Publish-GuestConfigurationPolicy -Path 'C:\GitHub\guestconfiguration\cis_controls\cce-37167-4-maximumpasswordage\policyDefinitions' -Verbose
 
-
+Publish-GuestConfigurationPolicy -Path '\policyDefinitions' -Verbose
