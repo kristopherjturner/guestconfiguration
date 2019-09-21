@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CCE-CCE-37452-0 -CIS - Change the System Time.",
+        "policyType": "Custom",
+        "description": "This policy setting determines which users and groups can change the time and date on the internal clock of the computers in your environment.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/8e315746-0c27-48d9-984d-6a6abc166837",
+                "policyDefinitionReferenceId": "Deploy_ChangeSystemTime",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/64858ad6-e7bc-4d8d-ad71-325639c66e65",
+                "policyDefinitionReferenceId": "Audit_ChangeSystemTime"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/5e94bf45-ee6e-4d3d-b592-45aa009e5ca9",
+    "name": "5e94bf45-ee6e-4d3d-b592-45aa009e5ca9"
+}

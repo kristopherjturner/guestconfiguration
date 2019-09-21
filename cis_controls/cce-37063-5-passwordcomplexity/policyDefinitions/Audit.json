@@ -1,11 +1,11 @@
 {
     "properties": {
-        "displayName": "[Audit] CCE-37063-5 - Password Complexity Requirements.",
+        "displayName": "[Audit] CIS - CCE-37063-5 - Password Complexity Requirements.",
         "policyType": "Custom",
         "mode": "All",
         "description": "This policy setting checks all new passwords to ensure that they meet basic requirements for strong passwords.",
         "metadata": {
-            "category": "Guest Configuration"
+            "category": "CIS Compliance"
         },
         "policyRule": {
             "if": {

@@ -1,11 +1,11 @@
 {
     "properties": {
-        "displayName": "[Deploy] CCE-36534-6 - Minimum Password Length.",
+        "displayName": "[Deploy] CIS - CCE-36534-6 - Minimum Password Length.",
         "policyType": "Custom",
         "mode": "Indexed",
         "description": "This policy setting determines the least number of characters that make up a password for a user account.",
         "metadata": {
-            "category": "Guest Configuration",
+            "category": "CIS Compliance",
             "requiredProviders": [
                 "Microsoft.GuestConfiguration"
             ]

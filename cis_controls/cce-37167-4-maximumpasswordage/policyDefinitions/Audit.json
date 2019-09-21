@@ -1,11 +1,11 @@
 {
     "properties": {
-        "displayName": "[Audit] CCE-37167-4 - Maximum Password Age.",
+        "displayName": "[Audit] CIS - CCE-37167-4 - Maximum Password Age.",
         "policyType": "Custom",
         "mode": "All",
         "description": "Ensure Maximum Password Age is set to...",
         "metadata": {
-            "category": "Guest Configuration"
+            "category": "CIS Compliance"
         },
         "policyRule": {
             "if": {

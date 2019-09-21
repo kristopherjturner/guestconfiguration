@@ -1,11 +1,11 @@
 {
     "properties": {
-        "displayName": "[Deploy] CCE-37166-6 - Password History Size.",
+        "displayName": "[Deploy] CIS - CCE-37166-6 - Password History Size.",
         "policyType": "Custom",
         "mode": "Indexed",
         "description": "Ensure Enforce password history is set to...",
         "metadata": {
-            "category": "Guest Configuration",
+            "category": "CIS Compliance",
             "requiredProviders": [
                 "Microsoft.GuestConfiguration"
             ]

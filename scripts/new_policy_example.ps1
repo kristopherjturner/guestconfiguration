@@ -24,10 +24,10 @@ New-GuestConfigurationPolicy
 ###  My examples below
 
 New-GuestConfigurationPolicy `
-    -ContentUri "https://guestconfiguration.blob.core.windows.net/content/MinimumPasswordAge.zip" `
-    -DisplayName "CCE-37073-4 - Minimum Password Age." `
-    -Description "This policy setting determines the number of days that you must use a password before you can change it." `
-    -Path "C:\GitHub\guestconfiguration\cis_controls\cce-37073-4-minimumpasswordage\policyDefinitions" `
+    -ContentUri "https://guestconfiguration.blob.core.windows.net/content/ChangeSystemTime.zip" `
+    -DisplayName "CCE-CCE-37452-0 -CIS - Change the System Time." `
+    -Description "This policy setting determines which users and groups can change the time and date on the internal clock of the computers in your environment." `
+    -Path ".\policyDefinitions" `
     -Platform "Windows" `
     -Version 1.0.0 `
     -Verbose

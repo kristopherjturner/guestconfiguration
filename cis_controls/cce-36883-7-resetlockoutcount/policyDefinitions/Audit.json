@@ -1,11 +1,11 @@
 {
     "properties": {
-        "displayName": "[Audit] CCE-36883-7 - Reset Account Lockout Counter.",
+        "displayName": "[Audit] CIS - CCE-36883-7 - Reset Account Lockout Counter.",
         "policyType": "Custom",
         "mode": "All",
         "description": "This policy setting determines the length of time before the Account lockout threshold resets to zero.",
         "metadata": {
-            "category": "Guest Configuration"
+            "category": "CIS Compliance"
         },
         "policyRule": {
             "if": {

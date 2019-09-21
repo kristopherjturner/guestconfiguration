@@ -1,11 +1,11 @@
 {
     "properties": {
-        "displayName": "[Deploy] CCE-36008-1 - Account Lockout Threshold.",
+        "displayName": "[Deploy] CIS - CCE-36008-1 - Account Lockout Threshold.",
         "policyType": "Custom",
         "mode": "Indexed",
         "description": "This policy setting determines the number of failed logon attempts before the account is locked.",
         "metadata": {
-            "category": "Guest Configuration",
+            "category": "CIS Compliance",
             "requiredProviders": [
                 "Microsoft.GuestConfiguration"
             ]

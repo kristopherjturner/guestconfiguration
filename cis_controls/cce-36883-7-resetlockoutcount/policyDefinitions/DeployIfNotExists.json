@@ -1,11 +1,11 @@
 {
     "properties": {
-        "displayName": "[Deploy] CCE-36883-7 - Reset Account Lockout Counter.",
+        "displayName": "[Deploy] CIS - CCE-36883-7 - Reset Account Lockout Counter.",
         "policyType": "Custom",
         "mode": "Indexed",
         "description": "This policy setting determines the length of time before the Account lockout threshold resets to zero.",
         "metadata": {
-            "category": "Guest Configuration",
+            "category": "CIS Compliance",
             "requiredProviders": [
                 "Microsoft.GuestConfiguration"
             ]

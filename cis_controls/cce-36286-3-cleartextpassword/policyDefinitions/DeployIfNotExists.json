@@ -1,11 +1,11 @@
 {
     "properties": {
-        "displayName": "[Deploy] CCE-36286-3 - Clear Text Password.",
+        "displayName": "[Deploy] CIS - CCE-36286-3 - Clear Text Password.",
         "policyType": "Custom",
         "mode": "Indexed",
         "description": "This policy setting determines whether the operating system stores passwords in a way that uses reversible encryption.",
         "metadata": {
-            "category": "Guest Configuration",
+            "category": "CIS Compliance",
             "requiredProviders": [
                 "Microsoft.GuestConfiguration"
             ]

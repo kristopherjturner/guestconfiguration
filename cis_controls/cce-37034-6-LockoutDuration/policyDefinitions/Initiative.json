@@ -1,10 +1,10 @@
 {
     "properties": {
-        "displayName": "[Initiative] CCE-37034-6 - Account Lockout Duration.",
+        "displayName": "[Initiative] CIS - CCE-37034-6 - Account Lockout Duration.",
         "policyType": "Custom",
         "description": "This policy setting determines the length of time that must pass before a locked account is unlocked and a user can try to log on again.",
         "metadata": {
-            "category": "Guest Configuration"
+            "category": "CIS Compliance"
         },
         "parameters": {},
         "policyDefinitions": [

@@ -1,11 +1,11 @@
 {
     "properties": {
-        "displayName": "[Deploy] CCE-37167-4 - Maximum Password Age.",
+        "displayName": "[Deploy] CIS - CCE-37167-4 - Maximum Password Age.",
         "policyType": "Custom",
         "mode": "Indexed",
         "description": "Ensure Maximum Password Age is set to...",
         "metadata": {
-            "category": "Guest Configuration",
+            "category": "CIS Compliance",
             "requiredProviders": [
                 "Microsoft.GuestConfiguration"
             ]

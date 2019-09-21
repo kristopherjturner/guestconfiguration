@@ -1,11 +1,11 @@
 {
     "properties": {
-        "displayName": "[Deploy] CCE-37073-4 - Minimum Password Age.",
+        "displayName": "[Deploy] CIS - CCE-37073-4 - Minimum Password Age.",
         "policyType": "Custom",
         "mode": "Indexed",
         "description": "This policy setting determines the number of days that you must use a password before you can change it.",
         "metadata": {
-            "category": "Guest Configuration",
+            "category": "CIS Compliance",
             "requiredProviders": [
                 "Microsoft.GuestConfiguration"
             ]

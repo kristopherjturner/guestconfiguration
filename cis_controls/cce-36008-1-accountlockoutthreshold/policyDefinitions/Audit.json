@@ -1,11 +1,11 @@
 {
     "properties": {
-        "displayName": "[Audit] CCE-36008-1 - Account Lockout Threshold.",
+        "displayName": "[Audit] CIS - CCE-36008-1 - Account Lockout Threshold.",
         "policyType": "Custom",
         "mode": "All",
         "description": "This policy setting determines the number of failed logon attempts before the account is locked.",
         "metadata": {
-            "category": "Guest Configuration"
+            "category": "CIS Compliance"
         },
         "policyRule": {
             "if": {

@@ -1,11 +1,11 @@
 {
     "properties": {
-        "displayName": "[Audit] CCE-37166-6 - Password History Size.",
+        "displayName": "[Audit] CIS - CCE-37166-6 - Password History Size.",
         "policyType": "Custom",
         "mode": "All",
         "description": "Ensure Enforce password history is set to...",
         "metadata": {
-            "category": "Guest Configuration"
+            "category": "CIS Compliance"
         },
         "policyRule": {
             "if": {

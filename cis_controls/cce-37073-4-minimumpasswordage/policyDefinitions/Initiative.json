@@ -1,10 +1,10 @@
 {
     "properties": {
-        "displayName": "[Initiative] CCE-37073-4 - Minimum Password Age.",
+        "displayName": "[Initiative] CIS - CCE-37073-4 - Minimum Password Age.",
         "policyType": "Custom",
         "description": "This policy setting determines the number of days that you must use a password before you can change it.",
         "metadata": {
-            "category": "Guest Configuration"
+            "category": "CIS Compliance"
         },
         "parameters": {},
         "policyDefinitions": [

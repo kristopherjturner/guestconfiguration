@@ -1,0 +1,34 @@
+{
+    "properties": {
+        "displayName": "[Audit] CIS - CCE-CCE-37056-9 - Access Credential Manager As A Trusted Caller.",
+        "policyType": "Custom",
+        "mode": "All",
+        "description": "This security setting is used by Credential Manager during Backup and Restore. No accounts should have this user right, as it is only assigned to Winlogon.",
+        "metadata": {
+            "category": "CIS Compliance"
+        },
+        "policyRule": {
+            "if": {
+                "allOf": [
+                    {
+                        "field": "type",
+                        "equals": "Microsoft.GuestConfiguration/guestConfigurationAssignments"
+                    },
+                    {
+                        "field": "name",
+                        "equals": "AccessCredentialManager"
+                    },
+                    {
+                        "field": "Microsoft.GuestConfiguration/guestConfigurationAssignments/complianceStatus",
+                        "notEquals": "Compliant"
+                    }
+                ]
+            },
+            "then": {
+                "effect": "audit"
+            }
+        }
+    },
+    "id": "/providers/Microsoft.Authorization/policyDefinitions/5958ef04-887d-4e61-a6b2-3f700d7eab70",
+    "name": "5958ef04-887d-4e61-a6b2-3f700d7eab70"
+}
