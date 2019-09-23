@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-36532-0 - Create Permanent Shared Objects.",
+        "policyType": "Custom",
+        "description": "This user right is useful to kernel-mode components that extend the object namespace.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/68812ff6-734c-48a4-906c-e6e687167829",
+                "policyDefinitionReferenceId": "Deploy_CreatePermanentSharedObject",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/62b07845-6711-48a1-8021-f0eaf6f22aa3",
+                "policyDefinitionReferenceId": "Audit_CreatePermanentSharedObject"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/ace45c1f-d8e7-4dfe-87fb-623700413d45",
+    "name": "ace45c1f-d8e7-4dfe-87fb-623700413d45"
+}

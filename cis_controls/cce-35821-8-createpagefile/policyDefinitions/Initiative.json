@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-35821-8 - Create a pagefile.",
+        "policyType": "Custom",
+        "description": "This policy setting allows users to change the size of the pagefile.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/8e43dfcf-d6c4-4ca4-9ac4-d07ca73b2e38",
+                "policyDefinitionReferenceId": "Deploy_CreatePageFile",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/33014c2a-1c1a-4119-b64c-e3c32e4a59a7",
+                "policyDefinitionReferenceId": "Audit_CreatePageFile"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/c942922f-0973-4b9f-a1eb-c4e3cc4c3e56",
+    "name": "c942922f-0973-4b9f-a1eb-c4e3cc4c3e56"
+}

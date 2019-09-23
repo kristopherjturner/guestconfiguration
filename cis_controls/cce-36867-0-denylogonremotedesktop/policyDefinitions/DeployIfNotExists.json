@@ -1,11 +1,11 @@
 {
     "properties": {
-        "displayName": "[Deploy] CIS - CCE-CCE-37452-0 - Change the System Time.",
+        "displayName": "[Deploy] CIS - CCE-36867-0 - Deny Log On Through Remote Desktop Services.",
         "policyType": "Custom",
         "mode": "Indexed",
-        "description": "This policy setting determines which users and groups can change the time and date on the internal clock of the computers in your environment.",
+        "description": "This policy setting determines whether users can log on as Terminal Services clients.",
         "metadata": {
-            "category": "CIS Compliance",
+            "category": "Guest Configuration",
             "requiredProviders": [
                 "Microsoft.GuestConfiguration"
             ]
@@ -138,7 +138,7 @@
                 "effect": "deployIfNotExists",
                 "details": {
                     "type": "Microsoft.GuestConfiguration/guestConfigurationAssignments",
-                    "name": "ChangeSystemTime",
+                    "name": "DenyLogOnRemoteDesktop",
                     "roleDefinitionIds": [
                         "/providers/microsoft.authorization/roleDefinitions/b24988ac-6180-42a0-ab88-20f7382dd24c"
                     ],
@@ -146,7 +146,7 @@
                         "allOf": [
                             {
                                 "field": "Microsoft.GuestConfiguration/guestConfigurationAssignments/contentHash",
-                                "equals": "71D03E614639A24B944C4A2B2A9908FF38617A6C77EB307487779EEB02010E01"
+                                "equals": "8059CD4272EFF085F9B642416E3A600DE3D2BBD97FBA717AB33FDD10BA9787D7"
                             }
                         ]
                     },
@@ -161,13 +161,13 @@
                                     "value": "[field('location')]"
                                 },
                                 "configurationName": {
-                                    "value": "ChangeSystemTime"
+                                    "value": "DenyLogOnRemoteDesktop"
                                 },
                                 "contentUri": {
-                                    "value": "https://guestconfiguration.blob.core.windows.net/content/ChangeSystemTime.zip"
+                                    "value": "https://guestconfiguration.blob.core.windows.net/content/DenyLogOnRemoteDesktop.zip"
                                 },
                                 "contentHash": {
-                                    "value": "71D03E614639A24B944C4A2B2A9908FF38617A6C77EB307487779EEB02010E01"
+                                    "value": "8059CD4272EFF085F9B642416E3A600DE3D2BBD97FBA717AB33FDD10BA9787D7"
                                 }
                             },
                             "template": {
@@ -239,6 +239,6 @@
             }
         }
     },
-    "id": "/providers/Microsoft.Authorization/policyDefinitions/8e315746-0c27-48d9-984d-6a6abc166837",
-    "name": "8e315746-0c27-48d9-984d-6a6abc166837"
+    "id": "/providers/Microsoft.Authorization/policyDefinitions/3b27fd20-b526-4626-9719-250a84d42e9b",
+    "name": "3b27fd20-b526-4626-9719-250a84d42e9b"
 }

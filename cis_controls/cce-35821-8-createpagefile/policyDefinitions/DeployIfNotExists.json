@@ -1,11 +1,11 @@
 {
     "properties": {
-        "displayName": "[Deploy] CIS - CCE-CCE-37452-0 - Change the System Time.",
+        "displayName": "[Deploy] CIS - CCE-35821-8 - Create a pagefile.",
         "policyType": "Custom",
         "mode": "Indexed",
-        "description": "This policy setting determines which users and groups can change the time and date on the internal clock of the computers in your environment.",
+        "description": "This policy setting allows users to change the size of the pagefile.",
         "metadata": {
-            "category": "CIS Compliance",
+            "category": "Guest Configuration",
             "requiredProviders": [
                 "Microsoft.GuestConfiguration"
             ]
@@ -138,7 +138,7 @@
                 "effect": "deployIfNotExists",
                 "details": {
                     "type": "Microsoft.GuestConfiguration/guestConfigurationAssignments",
-                    "name": "ChangeSystemTime",
+                    "name": "CreatePageFile",
                     "roleDefinitionIds": [
                         "/providers/microsoft.authorization/roleDefinitions/b24988ac-6180-42a0-ab88-20f7382dd24c"
                     ],
@@ -146,7 +146,7 @@
                         "allOf": [
                             {
                                 "field": "Microsoft.GuestConfiguration/guestConfigurationAssignments/contentHash",
-                                "equals": "71D03E614639A24B944C4A2B2A9908FF38617A6C77EB307487779EEB02010E01"
+                                "equals": "4F3A367CC31031C77959E6BF687864ED67E2410845741F75EEAC938CD2D0769C"
                             }
                         ]
                     },
@@ -161,13 +161,13 @@
                                     "value": "[field('location')]"
                                 },
                                 "configurationName": {
-                                    "value": "ChangeSystemTime"
+                                    "value": "CreatePageFile"
                                 },
                                 "contentUri": {
-                                    "value": "https://guestconfiguration.blob.core.windows.net/content/ChangeSystemTime.zip"
+                                    "value": "https://guestconfiguration.blob.core.windows.net/content/CreatePageFile.zip"
                                 },
                                 "contentHash": {
-                                    "value": "71D03E614639A24B944C4A2B2A9908FF38617A6C77EB307487779EEB02010E01"
+                                    "value": "4F3A367CC31031C77959E6BF687864ED67E2410845741F75EEAC938CD2D0769C"
                                 }
                             },
                             "template": {
@@ -239,6 +239,6 @@
             }
         }
     },
-    "id": "/providers/Microsoft.Authorization/policyDefinitions/8e315746-0c27-48d9-984d-6a6abc166837",
-    "name": "8e315746-0c27-48d9-984d-6a6abc166837"
+    "id": "/providers/Microsoft.Authorization/policyDefinitions/8e43dfcf-d6c4-4ca4-9ac4-d07ca73b2e38",
+    "name": "8e43dfcf-d6c4-4ca4-9ac4-d07ca73b2e38"
 }

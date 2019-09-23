@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-37453-8 - Create Global Objects.",
+        "policyType": "Custom",
+        "description": "This policy setting determines whether users can create global objects that are available to all sessions.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5b06e9b8-f2f1-451b-bcb2-21d52ef77450",
+                "policyDefinitionReferenceId": "Deploy_CreateGlobalObjects",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/cbd865af-e1ac-4a4e-bd1a-2c12b5bcb50a",
+                "policyDefinitionReferenceId": "Audit_CreateGlobalObjects"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/3a8aace2-2128-4b95-85c2-7241bacda25d",
+    "name": "3a8aace2-2128-4b95-85c2-7241bacda25d"
+}

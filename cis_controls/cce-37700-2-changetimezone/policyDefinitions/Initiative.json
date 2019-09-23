@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-37700-2 - Change the time zone.",
+        "policyType": "Custom",
+        "description": "This setting determines which users can change the time zone of the computer.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/24e22bc1-a1c0-41b4-a584-359a50eaf523",
+                "policyDefinitionReferenceId": "Deploy_ChangeTimeZone",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6336d198-c419-43c2-99d0-89f47336194e",
+                "policyDefinitionReferenceId": "Audit_ChangeTimeZone"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/db5cff33-5266-47a9-96ff-552259c0ec7a",
+    "name": "db5cff33-5266-47a9-96ff-552259c0ec7a"
+}

@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-36495-0 - Lock Pages In Memory.",
+        "policyType": "Custom",
+        "description": "This policy setting allows a process to keep data in physical memory, which prevents the system from paging the data to virtual memory on disk. If this user right is assigned, significant degradation of system performance can occur",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/eb650bf6-c8ec-48cc-b609-5eb6e22c6a8c",
+                "policyDefinitionReferenceId": "Deploy_LockPagesInMemory",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b64f59c6-0b1f-435f-a9cc-dae815daf19b",
+                "policyDefinitionReferenceId": "Audit_LockPagesInMemory"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/6c01668a-3ecd-4375-8888-4e35e1010c92",
+    "name": "6c01668a-3ecd-4375-8888-4e35e1010c92"
+}

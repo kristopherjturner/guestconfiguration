@@ -1,11 +1,11 @@
 {
     "properties": {
-        "displayName": "[Deploy] CIS - CCE-CCE-37452-0 - Change the System Time.",
+        "displayName": "[Deploy] CIS - CCE-37954-5 - Deny Access To This Computer From The Network.",
         "policyType": "Custom",
         "mode": "Indexed",
-        "description": "This policy setting determines which users and groups can change the time and date on the internal clock of the computers in your environment.",
+        "description": "This policy setting prohibits users from connecting to a computer from across the network, which would allow users to access and potentially modify data remotely.",
         "metadata": {
-            "category": "CIS Compliance",
+            "category": "Guest Configuration",
             "requiredProviders": [
                 "Microsoft.GuestConfiguration"
             ]
@@ -138,7 +138,7 @@
                 "effect": "deployIfNotExists",
                 "details": {
                     "type": "Microsoft.GuestConfiguration/guestConfigurationAssignments",
-                    "name": "ChangeSystemTime",
+                    "name": "DenyAccessComputerNetwork",
                     "roleDefinitionIds": [
                         "/providers/microsoft.authorization/roleDefinitions/b24988ac-6180-42a0-ab88-20f7382dd24c"
                     ],
@@ -146,7 +146,7 @@
                         "allOf": [
                             {
                                 "field": "Microsoft.GuestConfiguration/guestConfigurationAssignments/contentHash",
-                                "equals": "71D03E614639A24B944C4A2B2A9908FF38617A6C77EB307487779EEB02010E01"
+                                "equals": "7C95ADBDE75E3FBEC551BAC3CE98C3FD6F9A01B4034E9A6F25E7D75B7F7174AF"
                             }
                         ]
                     },
@@ -161,13 +161,13 @@
                                     "value": "[field('location')]"
                                 },
                                 "configurationName": {
-                                    "value": "ChangeSystemTime"
+                                    "value": "DenyAccessComputerNetwork"
                                 },
                                 "contentUri": {
-                                    "value": "https://guestconfiguration.blob.core.windows.net/content/ChangeSystemTime.zip"
+                                    "value": "https://guestconfiguration.blob.core.windows.net/content/DenyAccessComputerNetwork.zip"
                                 },
                                 "contentHash": {
-                                    "value": "71D03E614639A24B944C4A2B2A9908FF38617A6C77EB307487779EEB02010E01"
+                                    "value": "7C95ADBDE75E3FBEC551BAC3CE98C3FD6F9A01B4034E9A6F25E7D75B7F7174AF"
                                 }
                             },
                             "template": {
@@ -239,6 +239,6 @@
             }
         }
     },
-    "id": "/providers/Microsoft.Authorization/policyDefinitions/8e315746-0c27-48d9-984d-6a6abc166837",
-    "name": "8e315746-0c27-48d9-984d-6a6abc166837"
+    "id": "/providers/Microsoft.Authorization/policyDefinitions/63e9df8d-8475-4239-8bdf-73661ba2bb1c",
+    "name": "63e9df8d-8475-4239-8bdf-73661ba2bb1c"
 }

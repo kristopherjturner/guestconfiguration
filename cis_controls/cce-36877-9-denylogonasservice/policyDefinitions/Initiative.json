@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-36877-9 - Deny Log On As A Service.",
+        "policyType": "Custom",
+        "description": "This security setting determines which service accounts are prevented from registering a process as a service.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/d762e511-2760-48b8-8cea-74f922598cee",
+                "policyDefinitionReferenceId": "Deploy_DenyLogonAsService",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/29e1b4d2-a69a-4857-a11e-8c7e66dc3fd9",
+                "policyDefinitionReferenceId": "Audit_DenyLogonAsService"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/0bbd73c3-2ce2-4018-988f-efa4314f69df",
+    "name": "0bbd73c3-2ce2-4018-988f-efa4314f69df"
+}

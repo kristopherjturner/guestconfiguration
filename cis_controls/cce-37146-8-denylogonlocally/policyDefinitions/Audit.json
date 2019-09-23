@@ -1,11 +1,11 @@
 {
     "properties": {
-        "displayName": "[Audit] CIS - CCE-CCE-37452-0 - Change the System Time.",
+        "displayName": "[Audit] CIS - CCE-37146-8 - Deny Logon Locally.",
         "policyType": "Custom",
         "mode": "All",
-        "description": "This policy setting determines which users and groups can change the time and date on the internal clock of the computers in your environment.",
+        "description": "This security setting determines which users are prevented from logging on at the computer.",
         "metadata": {
-            "category": "CIS Compliance"
+            "category": "Guest Configuration"
         },
         "policyRule": {
             "if": {
@@ -16,7 +16,7 @@
                     },
                     {
                         "field": "name",
-                        "equals": "ChangeSystemTime"
+                        "equals": "DenyLogonLocally"
                     },
                     {
                         "field": "Microsoft.GuestConfiguration/guestConfigurationAssignments/complianceStatus",
@@ -29,6 +29,6 @@
             }
         }
     },
-    "id": "/providers/Microsoft.Authorization/policyDefinitions/64858ad6-e7bc-4d8d-ad71-325639c66e65",
-    "name": "64858ad6-e7bc-4d8d-ad71-325639c66e65"
+    "id": "/providers/Microsoft.Authorization/policyDefinitions/ac76c225-7aab-495f-96eb-6faa18198361",
+    "name": "ac76c225-7aab-495f-96eb-6faa18198361"
 }

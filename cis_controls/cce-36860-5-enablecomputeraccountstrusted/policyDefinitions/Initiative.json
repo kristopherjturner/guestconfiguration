@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-36860-5 - Enable Computer And User Accounts To Be Trusted for Delegation.",
+        "policyType": "Custom",
+        "description": "This policy setting allows users to change the Trusted for Delegation setting on a computer object in Active Directory.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/90b3e717-8832-4452-98bf-81f0430782fc",
+                "policyDefinitionReferenceId": "Deploy_EnableComputerAccountsTrusted",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a234518d-74b1-4feb-8f9c-869f21aa56ea",
+                "policyDefinitionReferenceId": "Audit_EnableComputerAccountsTrusted"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/51995da3-4703-4ade-bcab-5f8766480fda",
+    "name": "51995da3-4703-4ade-bcab-5f8766480fda"
+}

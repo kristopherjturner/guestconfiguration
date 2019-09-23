@@ -24,9 +24,9 @@ New-GuestConfigurationPolicy
 ###  My examples below
 
 New-GuestConfigurationPolicy `
-    -ContentUri "https://guestconfiguration.blob.core.windows.net/content/ChangeSystemTime.zip" `
-    -DisplayName "CCE-CCE-37452-0 -CIS - Change the System Time." `
-    -Description "This policy setting determines which users and groups can change the time and date on the internal clock of the computers in your environment." `
+    -ContentUri "https://guestconfiguration.blob.core.windows.net/content/DenyLogonAsService.zip" `
+    -DisplayName "CIS - CCE-36877-9 - Deny Log On As A Service." `
+    -Description "This security setting determines which service accounts are prevented from registering a process as a service." `
     -Path ".\policyDefinitions" `
     -Platform "Windows" `
     -Version 1.0.0 `

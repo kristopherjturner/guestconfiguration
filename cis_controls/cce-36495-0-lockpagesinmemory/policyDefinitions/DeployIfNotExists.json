@@ -1,11 +1,11 @@
 {
     "properties": {
-        "displayName": "[Deploy] CIS - CCE-CCE-37452-0 - Change the System Time.",
+        "displayName": "[Deploy] CIS - CCE-36495-0 - Lock Pages In Memory.",
         "policyType": "Custom",
         "mode": "Indexed",
-        "description": "This policy setting determines which users and groups can change the time and date on the internal clock of the computers in your environment.",
+        "description": "This policy setting allows a process to keep data in physical memory, which prevents the system from paging the data to virtual memory on disk. If this user right is assigned, significant degradation of system performance can occur",
         "metadata": {
-            "category": "CIS Compliance",
+            "category": "Guest Configuration",
             "requiredProviders": [
                 "Microsoft.GuestConfiguration"
             ]
@@ -138,7 +138,7 @@
                 "effect": "deployIfNotExists",
                 "details": {
                     "type": "Microsoft.GuestConfiguration/guestConfigurationAssignments",
-                    "name": "ChangeSystemTime",
+                    "name": "LockPagesInMemory",
                     "roleDefinitionIds": [
                         "/providers/microsoft.authorization/roleDefinitions/b24988ac-6180-42a0-ab88-20f7382dd24c"
                     ],
@@ -146,7 +146,7 @@
                         "allOf": [
                             {
                                 "field": "Microsoft.GuestConfiguration/guestConfigurationAssignments/contentHash",
-                                "equals": "71D03E614639A24B944C4A2B2A9908FF38617A6C77EB307487779EEB02010E01"
+                                "equals": "18C482853E17250DFB9307505D60168BABFF22CFCFE252FEED20B42907E30322"
                             }
                         ]
                     },
@@ -161,13 +161,13 @@
                                     "value": "[field('location')]"
                                 },
                                 "configurationName": {
-                                    "value": "ChangeSystemTime"
+                                    "value": "LockPagesInMemory"
                                 },
                                 "contentUri": {
-                                    "value": "https://guestconfiguration.blob.core.windows.net/content/ChangeSystemTime.zip"
+                                    "value": "https://guestconfiguration.blob.core.windows.net/content/LockPagesInMemory.zip"
                                 },
                                 "contentHash": {
-                                    "value": "71D03E614639A24B944C4A2B2A9908FF38617A6C77EB307487779EEB02010E01"
+                                    "value": "18C482853E17250DFB9307505D60168BABFF22CFCFE252FEED20B42907E30322"
                                 }
                             },
                             "template": {
@@ -239,6 +239,6 @@
             }
         }
     },
-    "id": "/providers/Microsoft.Authorization/policyDefinitions/8e315746-0c27-48d9-984d-6a6abc166837",
-    "name": "8e315746-0c27-48d9-984d-6a6abc166837"
+    "id": "/providers/Microsoft.Authorization/policyDefinitions/eb650bf6-c8ec-48cc-b609-5eb6e22c6a8c",
+    "name": "eb650bf6-c8ec-48cc-b609-5eb6e22c6a8c"
 }

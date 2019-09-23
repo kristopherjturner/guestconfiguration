@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-36867-0 - Deny Log On Through Remote Desktop Services.",
+        "policyType": "Custom",
+        "description": "This policy setting determines whether users can log on as Terminal Services clients.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3b27fd20-b526-4626-9719-250a84d42e9b",
+                "policyDefinitionReferenceId": "Deploy_DenyLogOnRemoteDesktop",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/21e89810-a6b0-4eec-a791-1e3e22823421",
+                "policyDefinitionReferenceId": "Audit_DenyLogOnRemoteDesktop"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/d051a98b-0a65-41e7-9663-f3ea8571bbe4",
+    "name": "d051a98b-0a65-41e7-9663-f3ea8571bbe4"
+}

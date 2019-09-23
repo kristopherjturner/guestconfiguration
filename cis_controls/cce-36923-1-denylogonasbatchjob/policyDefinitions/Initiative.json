@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-36923-1 - Deny Log On As A Batch Job.",
+        "policyType": "Custom",
+        "description": "This policy setting determines which accounts will not be able to log on to the computer as a batch job.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/bb5478bf-a4a2-4830-94c0-271f9df6be7f",
+                "policyDefinitionReferenceId": "Deploy_DenyLogOnAsBatchJob",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5117c4ad-672b-4fbf-9c06-52caeed7a547",
+                "policyDefinitionReferenceId": "Audit_DenyLogOnAsBatchJob"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/d533ca31-e89b-4dfc-9b37-098958c2859c",
+    "name": "d533ca31-e89b-4dfc-9b37-098958c2859c"
+}

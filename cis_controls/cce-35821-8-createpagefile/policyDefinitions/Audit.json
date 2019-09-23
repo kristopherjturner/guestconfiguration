@@ -1,11 +1,11 @@
 {
     "properties": {
-        "displayName": "[Audit] CIS - CCE-CCE-37452-0 - Change the System Time.",
+        "displayName": "[Audit] CIS - CCE-35821-8 - Create a pagefile.",
         "policyType": "Custom",
         "mode": "All",
-        "description": "This policy setting determines which users and groups can change the time and date on the internal clock of the computers in your environment.",
+        "description": "This policy setting allows users to change the size of the pagefile.",
         "metadata": {
-            "category": "CIS Compliance"
+            "category": "Guest Configuration"
         },
         "policyRule": {
             "if": {
@@ -16,7 +16,7 @@
                     },
                     {
                         "field": "name",
-                        "equals": "ChangeSystemTime"
+                        "equals": "CreatePageFile"
                     },
                     {
                         "field": "Microsoft.GuestConfiguration/guestConfigurationAssignments/complianceStatus",
@@ -29,6 +29,6 @@
             }
         }
     },
-    "id": "/providers/Microsoft.Authorization/policyDefinitions/64858ad6-e7bc-4d8d-ad71-325639c66e65",
-    "name": "64858ad6-e7bc-4d8d-ad71-325639c66e65"
+    "id": "/providers/Microsoft.Authorization/policyDefinitions/33014c2a-1c1a-4119-b64c-e3c32e4a59a7",
+    "name": "33014c2a-1c1a-4119-b64c-e3c32e4a59a7"
 }

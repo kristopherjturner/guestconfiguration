@@ -1,11 +1,11 @@
 {
     "properties": {
-        "displayName": "[Audit] CIS - CCE-CCE-37452-0 - Change the System Time.",
+        "displayName": "[Audit] CIS - CCE-37954-5 - Deny Access To This Computer From The Network.",
         "policyType": "Custom",
         "mode": "All",
-        "description": "This policy setting determines which users and groups can change the time and date on the internal clock of the computers in your environment.",
+        "description": "This policy setting prohibits users from connecting to a computer from across the network, which would allow users to access and potentially modify data remotely.",
         "metadata": {
-            "category": "CIS Compliance"
+            "category": "Guest Configuration"
         },
         "policyRule": {
             "if": {
@@ -16,7 +16,7 @@
                     },
                     {
                         "field": "name",
-                        "equals": "ChangeSystemTime"
+                        "equals": "DenyAccessComputerNetwork"
                     },
                     {
                         "field": "Microsoft.GuestConfiguration/guestConfigurationAssignments/complianceStatus",
@@ -29,6 +29,6 @@
             }
         }
     },
-    "id": "/providers/Microsoft.Authorization/policyDefinitions/64858ad6-e7bc-4d8d-ad71-325639c66e65",
-    "name": "64858ad6-e7bc-4d8d-ad71-325639c66e65"
+    "id": "/providers/Microsoft.Authorization/policyDefinitions/1a8a8776-d07d-4a33-9d65-1e9a2622ab8d",
+    "name": "1a8a8776-d07d-4a33-9d65-1e9a2622ab8d"
 }

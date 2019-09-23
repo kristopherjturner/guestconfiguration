@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-37954-5 - Deny Access To This Computer From The Network.",
+        "policyType": "Custom",
+        "description": "This policy setting prohibits users from connecting to a computer from across the network, which would allow users to access and potentially modify data remotely.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/63e9df8d-8475-4239-8bdf-73661ba2bb1c",
+                "policyDefinitionReferenceId": "Deploy_DenyAccessComputerNetwork",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1a8a8776-d07d-4a33-9d65-1e9a2622ab8d",
+                "policyDefinitionReferenceId": "Audit_DenyAccessComputerNetwork"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/4c8ed6a4-703c-448c-a6d8-5d2c8ace6dbf",
+    "name": "4c8ed6a4-703c-448c-a6d8-5d2c8ace6dbf"
+}

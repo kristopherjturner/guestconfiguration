@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-38326-5 - Increase Scheduling Priority.",
+        "policyType": "Custom",
+        "description": "This policy setting determines whether users can increase the base priority class of a process.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5f26752f-b1bb-4fbc-9f3d-b703270630e7",
+                "policyDefinitionReferenceId": "Deploy_IncreaseSchedulingPriority",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/db099458-c1a5-47e4-be2c-a208fda2c4bc",
+                "policyDefinitionReferenceId": "Audit_IncreaseSchedulingPriority"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/24addecf-a77c-4b04-b4ba-f901ad231aa5",
+    "name": "24addecf-a77c-4b04-b4ba-f901ad231aa5"
+}

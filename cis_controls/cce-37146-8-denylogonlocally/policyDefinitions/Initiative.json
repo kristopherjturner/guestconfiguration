@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-37146-8 - Deny Logon Locally.",
+        "policyType": "Custom",
+        "description": "This security setting determines which users are prevented from logging on at the computer.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/99af4a54-c08e-47b2-ac7d-d9538c27e7a8",
+                "policyDefinitionReferenceId": "Deploy_DenyLogonLocally",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ac76c225-7aab-495f-96eb-6faa18198361",
+                "policyDefinitionReferenceId": "Audit_DenyLogonLocally"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/5bf3aa37-846c-4782-a653-dbd4077dec8d",
+    "name": "5bf3aa37-846c-4782-a653-dbd4077dec8d"
+}
