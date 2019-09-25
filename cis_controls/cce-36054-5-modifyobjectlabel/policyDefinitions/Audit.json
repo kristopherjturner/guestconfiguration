@@ -1,0 +1,34 @@
+{
+    "properties": {
+        "displayName": "[Audit] CIS - CCE-36054-5 - Modigy An Object Label",
+        "policyType": "Custom",
+        "mode": "All",
+        "description": "This privilege determines which user accounts can modify the integrity label of objects, such as files, registry keys, or processes owned by other users",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "policyRule": {
+            "if": {
+                "allOf": [
+                    {
+                        "field": "type",
+                        "equals": "Microsoft.GuestConfiguration/guestConfigurationAssignments"
+                    },
+                    {
+                        "field": "name",
+                        "equals": "ModifyObjectLabel"
+                    },
+                    {
+                        "field": "Microsoft.GuestConfiguration/guestConfigurationAssignments/complianceStatus",
+                        "notEquals": "Compliant"
+                    }
+                ]
+            },
+            "then": {
+                "effect": "audit"
+            }
+        }
+    },
+    "id": "/providers/Microsoft.Authorization/policyDefinitions/49315361-1230-4fbd-bdcf-858f3e0aa4be",
+    "name": "49315361-1230-4fbd-bdcf-858f3e0aa4be"
+}

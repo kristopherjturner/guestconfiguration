@@ -1,0 +1,34 @@
+{
+    "properties": {
+        "displayName": "[Audit] CIS - CCE-38325-7 - Take ownership of files or other objects",
+        "policyType": "Custom",
+        "mode": "All",
+        "description": "This policy setting allows users to take ownership of files, folders, registry keys, processes, or threads.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "policyRule": {
+            "if": {
+                "allOf": [
+                    {
+                        "field": "type",
+                        "equals": "Microsoft.GuestConfiguration/guestConfigurationAssignments"
+                    },
+                    {
+                        "field": "name",
+                        "equals": "TakeOwnershipObjects"
+                    },
+                    {
+                        "field": "Microsoft.GuestConfiguration/guestConfigurationAssignments/complianceStatus",
+                        "notEquals": "Compliant"
+                    }
+                ]
+            },
+            "then": {
+                "effect": "audit"
+            }
+        }
+    },
+    "id": "/providers/Microsoft.Authorization/policyDefinitions/8dd2b373-36f6-4bc0-a607-fa60f3d22b40",
+    "name": "8dd2b373-36f6-4bc0-a607-fa60f3d22b40"
+}

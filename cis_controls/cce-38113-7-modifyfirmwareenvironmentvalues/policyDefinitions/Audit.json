@@ -1,0 +1,34 @@
+{
+    "properties": {
+        "displayName": "[Audit] CIS - CCE-38113-7 - Modify Firmware Environment Values",
+        "policyType": "Custom",
+        "mode": "All",
+        "description": "This policy setting allows users to configure the system-wide environment variables that affect hardware configuration",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "policyRule": {
+            "if": {
+                "allOf": [
+                    {
+                        "field": "type",
+                        "equals": "Microsoft.GuestConfiguration/guestConfigurationAssignments"
+                    },
+                    {
+                        "field": "name",
+                        "equals": "ModifyFirmwareEnvironmentValues"
+                    },
+                    {
+                        "field": "Microsoft.GuestConfiguration/guestConfigurationAssignments/complianceStatus",
+                        "notEquals": "Compliant"
+                    }
+                ]
+            },
+            "then": {
+                "effect": "audit"
+            }
+        }
+    },
+    "id": "/providers/Microsoft.Authorization/policyDefinitions/f184cb40-483b-4b94-bd55-e6f39a709ea1",
+    "name": "f184cb40-483b-4b94-bd55-e6f39a709ea1"
+}

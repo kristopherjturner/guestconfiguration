@@ -1,0 +1,34 @@
+{
+    "properties": {
+        "displayName": "[Audit] CIS - CCE-37615-2 - Accounts: Limit local account use of blank passwords to console logon only",
+        "policyType": "Custom",
+        "mode": "All",
+        "description": "This policy setting determines whether local accounts that are not password protected can be used to log on from locations other than the physical computer console.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "policyRule": {
+            "if": {
+                "allOf": [
+                    {
+                        "field": "type",
+                        "equals": "Microsoft.GuestConfiguration/guestConfigurationAssignments"
+                    },
+                    {
+                        "field": "name",
+                        "equals": "LimitBlankPasswordUse"
+                    },
+                    {
+                        "field": "Microsoft.GuestConfiguration/guestConfigurationAssignments/complianceStatus",
+                        "notEquals": "Compliant"
+                    }
+                ]
+            },
+            "then": {
+                "effect": "audit"
+            }
+        }
+    },
+    "id": "/providers/Microsoft.Authorization/policyDefinitions/20a62303-864c-4880-b6ca-d1a5ff91719a",
+    "name": "20a62303-864c-4880-b6ca-d1a5ff91719a"
+}

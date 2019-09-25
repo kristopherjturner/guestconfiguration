@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-35906-7 - Manage Auditing and Security Log",
+        "policyType": "Custom",
+        "description": "This policy setting determines which users can change the auditing options for files and directories and clear the Security log.For environments running Microsoft Exchange Server, the Exchange Servers group must possess this privilege on Domain Controllers to properly function",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/d5d07904-6608-4251-8509-01a6cca84267",
+                "policyDefinitionReferenceId": "Deploy_ManageAuditingSecurityLog",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/cb31a93f-606a-4f3f-b811-f35afb439596",
+                "policyDefinitionReferenceId": "Audit_ManageAuditingSecurityLog"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/7f28a681-aa43-4356-9a9a-c9bfa0302696",
+    "name": "7f28a681-aa43-4356-9a9a-c9bfa0302696"
+}

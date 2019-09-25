@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-36142-8 - Digitally Encrypt or Sign Secure Channel Data",
+        "policyType": "Custom",
+        "description": "This policy setting determines whether all secure channel traffic that is initiated by the domain member must be signed or encrypted",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e4d827a7-2ded-4593-9f34-aeb5a54c9b9b",
+                "policyDefinitionReferenceId": "Deploy_DigitallyEncryptSecureChannelData",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/67bc9916-4f3d-4c79-8e52-f6382b9c3118",
+                "policyDefinitionReferenceId": "Audit_DigitallyEncryptSecureChannelData"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/9198571e-b41e-4a87-96f1-0044af08ee88",
+    "name": "9198571e-b41e-4a87-96f1-0044af08ee88"
+}

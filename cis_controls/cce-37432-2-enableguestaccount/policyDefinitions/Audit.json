@@ -1,0 +1,34 @@
+{
+    "properties": {
+        "displayName": "[Audit] CIS - CCE-37432-2 - Accounts: Guest account status",
+        "policyType": "Custom",
+        "mode": "All",
+        "description": "This policy setting determines whether the Guest account is enabled or disabled.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "policyRule": {
+            "if": {
+                "allOf": [
+                    {
+                        "field": "type",
+                        "equals": "Microsoft.GuestConfiguration/guestConfigurationAssignments"
+                    },
+                    {
+                        "field": "name",
+                        "equals": "EnableGuestAccount"
+                    },
+                    {
+                        "field": "Microsoft.GuestConfiguration/guestConfigurationAssignments/complianceStatus",
+                        "notEquals": "Compliant"
+                    }
+                ]
+            },
+            "then": {
+                "effect": "audit"
+            }
+        }
+    },
+    "id": "/providers/Microsoft.Authorization/policyDefinitions/fcf970c1-b35c-4c08-b421-3ce40ceb4003",
+    "name": "fcf970c1-b35c-4c08-b421-3ce40ceb4003"
+}

@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-36052-9 - Profile System Performance",
+        "policyType": "Custom",
+        "description": "This policy setting allows users to use tools to view the performance of different system processes, which could be abused to allow attackers to determine a system's active processes and provide insight into the potential attack surface of the computer.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/27674ec0-b672-48bc-91a4-a7e76c479632",
+                "policyDefinitionReferenceId": "Deploy_ProfileSystemPerformance",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/4fdb4ea7-8498-4488-b0c8-6b1dc9615e40",
+                "policyDefinitionReferenceId": "Audit_ProfileSystemPerformance"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/3c608317-493c-4cc5-a987-9262443398c9",
+    "name": "3c608317-493c-4cc5-a987-9262443398c9"
+}

@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-36143-6 - Perform Volume Maintenance Tasks",
+        "policyType": "Custom",
+        "description": "This policy setting allows users to manage the system's volume or disk configuration, which could allow a user to delete a volume and cause data loss as well as a denial-of-service condition.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/83947584-0668-47ea-9d27-8e6e2f062a73",
+                "policyDefinitionReferenceId": "Deploy_PerformVolumeMaintenanceTasks",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/43800c8d-abb0-4fb0-957b-430967f6aa57",
+                "policyDefinitionReferenceId": "Audit_PerformVolumeMaintenanceTasks"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/84d4793f-4f7c-4697-9631-3ce0c8290113",
+    "name": "84d4793f-4f7c-4697-9631-3ce0c8290113"
+}

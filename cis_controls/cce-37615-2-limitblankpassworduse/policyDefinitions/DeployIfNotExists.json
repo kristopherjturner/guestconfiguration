@@ -1,0 +1,244 @@
+{
+    "properties": {
+        "displayName": "[Deploy] CIS - CCE-37615-2 - Accounts: Limit local account use of blank passwords to console logon only",
+        "policyType": "Custom",
+        "mode": "Indexed",
+        "description": "This policy setting determines whether local accounts that are not password protected can be used to log on from locations other than the physical computer console.",
+        "metadata": {
+            "category": "Guest Configuration",
+            "requiredProviders": [
+                "Microsoft.GuestConfiguration"
+            ]
+        },
+        "policyRule": {
+            "if": {
+                "allOf": [
+                    {
+                        "field": "type",
+                        "equals": "Microsoft.Compute/virtualMachines"
+                    },
+                    {
+                        "anyOf": [
+                            {
+                                "field": "Microsoft.Compute/imagePublisher",
+                                "in": [
+                                    "esri",
+                                    "incredibuild",
+                                    "MicrosoftDynamicsAX",
+                                    "MicrosoftSharepoint",
+                                    "MicrosoftVisualStudio",
+                                    "MicrosoftWindowsDesktop",
+                                    "MicrosoftWindowsServerHPCPack"
+                                ]
+                            },
+                            {
+                                "allOf": [
+                                    {
+                                        "field": "Microsoft.Compute/imagePublisher",
+                                        "equals": "MicrosoftWindowsServer"
+                                    },
+                                    {
+                                        "field": "Microsoft.Compute/imageSKU",
+                                        "notLike": "2008*"
+                                    }
+                                ]
+                            },
+                            {
+                                "allOf": [
+                                    {
+                                        "field": "Microsoft.Compute/imagePublisher",
+                                        "equals": "MicrosoftSQLServer"
+                                    },
+                                    {
+                                        "field": "Microsoft.Compute/imageSKU",
+                                        "notEquals": "SQL2008R2SP3-WS2008R2SP1"
+                                    }
+                                ]
+                            },
+                            {
+                                "allOf": [
+                                    {
+                                        "field": "Microsoft.Compute/imagePublisher",
+                                        "equals": "microsoft-dsvm"
+                                    },
+                                    {
+                                        "field": "Microsoft.Compute/imageOffer",
+                                        "equals": "dsvm-windows"
+                                    }
+                                ]
+                            },
+                            {
+                                "allOf": [
+                                    {
+                                        "field": "Microsoft.Compute/imagePublisher",
+                                        "equals": "microsoft-ads"
+                                    },
+                                    {
+                                        "field": "Microsoft.Compute/imageOffer",
+                                        "in": [
+                                            "standard-data-science-vm",
+                                            "windows-data-science-vm"
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "allOf": [
+                                    {
+                                        "field": "Microsoft.Compute/imagePublisher",
+                                        "equals": "batch"
+                                    },
+                                    {
+                                        "field": "Microsoft.Compute/imageOffer",
+                                        "equals": "rendering-windows2016"
+                                    }
+                                ]
+                            },
+                            {
+                                "allOf": [
+                                    {
+                                        "field": "Microsoft.Compute/imagePublisher",
+                                        "equals": "center-for-internet-security-inc"
+                                    },
+                                    {
+                                        "field": "Microsoft.Compute/imageOffer",
+                                        "like": "cis-windows-server-201*"
+                                    }
+                                ]
+                            },
+                            {
+                                "allOf": [
+                                    {
+                                        "field": "Microsoft.Compute/imagePublisher",
+                                        "equals": "pivotal"
+                                    },
+                                    {
+                                        "field": "Microsoft.Compute/imageOffer",
+                                        "like": "bosh-windows-server*"
+                                    }
+                                ]
+                            },
+                            {
+                                "allOf": [
+                                    {
+                                        "field": "Microsoft.Compute/imagePublisher",
+                                        "equals": "cloud-infrastructure-services"
+                                    },
+                                    {
+                                        "field": "Microsoft.Compute/imageOffer",
+                                        "like": "ad*"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "then": {
+                "effect": "deployIfNotExists",
+                "details": {
+                    "type": "Microsoft.GuestConfiguration/guestConfigurationAssignments",
+                    "name": "LimitBlankPasswordUse",
+                    "roleDefinitionIds": [
+                        "/providers/microsoft.authorization/roleDefinitions/b24988ac-6180-42a0-ab88-20f7382dd24c"
+                    ],
+                    "existenceCondition": {
+                        "allOf": [
+                            {
+                                "field": "Microsoft.GuestConfiguration/guestConfigurationAssignments/contentHash",
+                                "equals": "3ADAB3601D2EDB7FACE2ACE1BE7CEDA4A7F1555422F2C167A7407317D6D7F05B"
+                            }
+                        ]
+                    },
+                    "deployment": {
+                        "properties": {
+                            "mode": "incremental",
+                            "parameters": {
+                                "vmName": {
+                                    "value": "[field('name')]"
+                                },
+                                "location": {
+                                    "value": "[field('location')]"
+                                },
+                                "configurationName": {
+                                    "value": "LimitBlankPasswordUse"
+                                },
+                                "contentUri": {
+                                    "value": "https://guestconfiguration.blob.core.windows.net/content/LimitBlankPasswordUse.zip"
+                                },
+                                "contentHash": {
+                                    "value": "3ADAB3601D2EDB7FACE2ACE1BE7CEDA4A7F1555422F2C167A7407317D6D7F05B"
+                                }
+                            },
+                            "template": {
+                                "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+                                "contentVersion": "1.0.0.0",
+                                "parameters": {
+                                    "vmName": {
+                                        "type": "string"
+                                    },
+                                    "location": {
+                                        "type": "string"
+                                    },
+                                    "configurationName": {
+                                        "type": "string"
+                                    },
+                                    "contentUri": {
+                                        "type": "string"
+                                    },
+                                    "contentHash": {
+                                        "type": "string"
+                                    }
+                                },
+                                "resources": [
+                                    {
+                                        "apiVersion": "2018-11-20",
+                                        "type": "Microsoft.Compute/virtualMachines/providers/guestConfigurationAssignments",
+                                        "name": "[concat(parameters('vmName'), '/Microsoft.GuestConfiguration/', parameters('configurationName'))]",
+                                        "location": "[parameters('location')]",
+                                        "properties": {
+                                            "guestConfiguration": {
+                                                "name": "[parameters('configurationName')]",
+                                                "contentUri": "[parameters('contentUri')]",
+                                                "contentHash": "[parameters('contentHash')]",
+                                                "version": "1.0.0"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "apiVersion": "2017-03-30",
+                                        "type": "Microsoft.Compute/virtualMachines",
+                                        "identity": {
+                                            "type": "SystemAssigned"
+                                        },
+                                        "name": "[parameters('vmName')]",
+                                        "location": "[parameters('location')]"
+                                    },
+                                    {
+                                        "apiVersion": "2015-05-01-preview",
+                                        "name": "[concat(parameters('vmName'), '/AzurePolicyforWindows')]",
+                                        "type": "Microsoft.Compute/virtualMachines/extensions",
+                                        "location": "[parameters('location')]",
+                                        "properties": {
+                                            "publisher": "Microsoft.GuestConfiguration",
+                                            "type": "ConfigurationforWindows",
+                                            "typeHandlerVersion": "1.1",
+                                            "autoUpgradeMinorVersion": true,
+                                            "settings": {},
+                                            "protectedSettings": {}
+                                        },
+                                        "dependsOn": [
+                                            "[concat('Microsoft.Compute/virtualMachines/',parameters('vmName'),'/providers/Microsoft.GuestConfiguration/guestConfigurationAssignments/',parameters('configurationName'))]"
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "id": "/providers/Microsoft.Authorization/policyDefinitions/558ed094-7967-44a1-9978-6ce1f1cbe7fb",
+    "name": "558ed094-7967-44a1-9978-6ce1f1cbe7fb"
+}

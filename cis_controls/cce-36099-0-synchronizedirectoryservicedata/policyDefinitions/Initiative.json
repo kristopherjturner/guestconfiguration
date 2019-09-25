@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-36099-0 - Synchronize Directory Service Data",
+        "policyType": "Custom",
+        "description": "This security setting determines which users and groups have the authority to synchronize all directory service data.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/acc52630-9034-432a-8900-ff965468b132",
+                "policyDefinitionReferenceId": "Deploy_SynchronizeDirectoryServiceData",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5a4f2467-b20c-4dac-ad2e-bab9226a26d2",
+                "policyDefinitionReferenceId": "Audit_SynchronizeDirectoryServiceData"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/056e0822-6f14-492e-8499-aab088ea89b9",
+    "name": "056e0822-6f14-492e-8499-aab088ea89b9"
+}
