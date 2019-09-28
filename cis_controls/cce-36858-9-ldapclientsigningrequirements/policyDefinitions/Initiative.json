@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-36858-9 -  LDAP client signing requirements",
+        "policyType": "Custom",
+        "description": "This policy setting determines the level of data signing that is requested on behalf of clients that issue LDAP BIND requests.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/85b85401-3634-4261-864c-6bea3e78a852",
+                "policyDefinitionReferenceId": "Deploy_LDAPClientSigningRequirements",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9b024e73-3bfe-41e3-9158-e705c787d60a",
+                "policyDefinitionReferenceId": "Audit_LDAPClientSigningRequirements"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/30cab94f-f97c-4263-9009-601d9a29462f",
+    "name": "30cab94f-f97c-4263-9009-601d9a29462f"
+}
