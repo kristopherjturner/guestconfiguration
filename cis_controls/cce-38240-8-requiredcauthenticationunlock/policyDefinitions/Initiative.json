@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-38240-8 - Require Domain Controller Authentication to unlock workstation",
+        "policyType": "Custom",
+        "description": "Logon information is required to unlock a locked computer.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/92d12a86-a9f9-4caa-a7f6-b80b6fe2dfb7",
+                "policyDefinitionReferenceId": "Deploy_RequireDCAuthenticationUnlock",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/2b1c3521-f769-4106-9948-e8bfb8e25d7b",
+                "policyDefinitionReferenceId": "Audit_RequireDCAuthenticationUnlock"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/b7a1f2c1-697a-45c6-ad64-ee5a5e1d3bfe",
+    "name": "b7a1f2c1-697a-45c6-ad64-ee5a5e1d3bfe"
+}

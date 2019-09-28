@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-37508-9 - Domain member: Disable machine account password changes",
+        "policyType": "Custom",
+        "description": "This policy setting determines whether a domain member can periodically change its computer account password.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/8326c9fa-b192-4b80-91c0-203487aacbe5",
+                "policyDefinitionReferenceId": "Deploy_DisableMachineAccountPasswordChanges",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3e4aab35-43bd-4bde-b675-54dc79e5ef02",
+                "policyDefinitionReferenceId": "Audit_DisableMachineAccountPasswordChanges"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/4e74051b-bb32-4c21-a2ea-a6d5a3eb877e",
+    "name": "4e74051b-bb32-4c21-a2ea-a6d5a3eb877e"
+}

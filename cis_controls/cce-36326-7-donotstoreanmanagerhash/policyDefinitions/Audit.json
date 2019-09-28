@@ -1,0 +1,34 @@
+{
+    "properties": {
+        "displayName": "[Audit] CIS - CCE-36326-7 - Do not store LAN Manager hash value on next password change",
+        "policyType": "Custom",
+        "mode": "All",
+        "description": "This policy setting determines whether the LAN Manager (LM) hash value for the new password is stored when the password is changed",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "policyRule": {
+            "if": {
+                "allOf": [
+                    {
+                        "field": "type",
+                        "equals": "Microsoft.GuestConfiguration/guestConfigurationAssignments"
+                    },
+                    {
+                        "field": "name",
+                        "equals": "DoNotStoreLANManagerHash"
+                    },
+                    {
+                        "field": "Microsoft.GuestConfiguration/guestConfigurationAssignments/complianceStatus",
+                        "notEquals": "Compliant"
+                    }
+                ]
+            },
+            "then": {
+                "effect": "audit"
+            }
+        }
+    },
+    "id": "/providers/Microsoft.Authorization/policyDefinitions/ee2b01b8-c0bf-4f57-96c8-c6a86d28d491",
+    "name": "ee2b01b8-c0bf-4f57-96c8-c6a86d28d491"
+}

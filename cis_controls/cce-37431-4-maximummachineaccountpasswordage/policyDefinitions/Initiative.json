@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-37431-4 - Domain member: Maximum machine account password age",
+        "policyType": "Custom",
+        "description": "This policy setting determines the maximum allowable age for a computer account password.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1c7c7a2e-f89a-46ee-8fbc-fc88483bcc4d",
+                "policyDefinitionReferenceId": "Deploy_MaximumMachineAccountPasswordAge",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6b01169e-781e-499a-9080-89940efb7104",
+                "policyDefinitionReferenceId": "Audit_MaximumMachineAccountPasswordAge"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/cac253f8-0c6b-448f-b257-1f308baf51ba",
+    "name": "cac253f8-0c6b-448f-b257-1f308baf51ba"
+}

@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-36021-4 - Restrict anonymous access to Named Pipes and Shares",
+        "policyType": "Custom",
+        "description": "When enabled, this policy setting restricts anonymous access to only those shares and pipes that are named in the Network access: Named pipes that can be accessed anonymously and Network access.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b877ecb2-f801-40a1-b469-4a58abd7f0fc",
+                "policyDefinitionReferenceId": "Deploy_RestrictAnonymousAccessNamedPipes",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/8936bd84-1655-469c-b450-b7b58bc07a44",
+                "policyDefinitionReferenceId": "Audit_RestrictAnonymousAccessNamedPipes"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/a66fa072-be20-4f32-b2ea-8909da81959f",
+    "name": "a66fa072-be20-4f32-b2ea-8909da81959f"
+}

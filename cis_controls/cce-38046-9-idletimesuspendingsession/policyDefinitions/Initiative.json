@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-38046-9 - Amount of idle time required before suspending session",
+        "policyType": "Custom",
+        "description": "This policy setting allows you to specify the amount of continuous idle time that must pass in an SMB session before the session is suspended because of inactivity.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e56637ea-7956-4ddc-93f6-e40388d5813a",
+                "policyDefinitionReferenceId": "Deploy_IdleTimeSuspendingSession",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/23c825c2-53a3-465d-b3a9-54414fbab888",
+                "policyDefinitionReferenceId": "Audit_IdleTimeSuspendingSession"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/43e8d239-aa97-4cee-8b3f-88a05cf9507d",
+    "name": "43e8d239-aa97-4cee-8b3f-88a05cf9507d"
+}

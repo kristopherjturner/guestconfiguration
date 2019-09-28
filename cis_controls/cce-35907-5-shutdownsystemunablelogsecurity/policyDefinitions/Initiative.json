@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-35907-5 - Audit: Shut down system immediately if unable to log security audits",
+        "policyType": "Custom",
+        "description": "This policy setting determines whether the system shuts down if it is unable to log Security events.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/06e70d03-fe7f-403d-b52a-a6969d36a392",
+                "policyDefinitionReferenceId": "Deploy_ShutDownSystemUnableLogSecurity",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e98ccff5-6d37-418d-9aec-8e7ec6ff3399",
+                "policyDefinitionReferenceId": "Audit_ShutDownSystemUnableLogSecurity"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/5f0e68be-966a-4545-a3cd-f0f7e70f9625",
+    "name": "5f0e68be-966a-4545-a3cd-f0f7e70f9625"
+}

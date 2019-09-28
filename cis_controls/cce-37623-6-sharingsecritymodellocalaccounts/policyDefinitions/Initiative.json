@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-37623-6 - Sharing and security model for local accounts",
+        "policyType": "Custom",
+        "description": "This policy setting determines how network logons that use local accounts are authenticated.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/57eccc21-55b9-440e-b02d-0f1d4bdcaaef",
+                "policyDefinitionReferenceId": "Deploy_SharingSecurityModelLocalAccounts",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0ae917e1-b403-4ca3-8d5e-ebca7de24a30",
+                "policyDefinitionReferenceId": "Audit_SharingSecurityModelLocalAccounts"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/7c733dbf-bbab-4479-928a-f31c22fcdc8e",
+    "name": "7c733dbf-bbab-4479-928a-f31c22fcdc8e"
+}

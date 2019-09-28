@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-36148-5 - Let Everyone permissions apply to anonymous users",
+        "policyType": "Custom",
+        "description": "This policy setting determines what additional permissions are assigned for anonymous connections to the computer.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3b1215f5-9492-4242-abbe-7b8448a93e61",
+                "policyDefinitionReferenceId": "Deploy_PermissionsApplyAnonymousUsers",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9809efbe-a4bd-4639-bf7a-e9a9b66bfaa4",
+                "policyDefinitionReferenceId": "Audit_PermissionsApplyAnonymousUsers"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/0a6c0265-9a3e-4fe2-b991-900516919aac",
+    "name": "0a6c0265-9a3e-4fe2-b991-900516919aac"
+}

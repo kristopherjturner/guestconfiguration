@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-37972-7 - Disconnect clients when logon hours expire",
+        "policyType": "Custom",
+        "description": "This security setting determines whether to disconnect users who are connected to the local computer outside their user account's valid logon hours.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c3bd2790-4e26-4d9a-a17f-2a218c3c7b31",
+                "policyDefinitionReferenceId": "Deploy_DisconnectClientsLogonExpire",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/4ff04b89-8e3b-40c8-8e37-ab7b751595f3",
+                "policyDefinitionReferenceId": "Audit_DisconnectClientsLogonExpire"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/e5195eb0-2159-4397-a15a-3d2d9eb4e2ee",
+    "name": "e5195eb0-2159-4397-a15a-3d2d9eb4e2ee"
+}

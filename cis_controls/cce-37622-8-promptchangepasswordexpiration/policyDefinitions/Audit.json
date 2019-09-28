@@ -1,0 +1,34 @@
+{
+    "properties": {
+        "displayName": "[Audit] CIS - CCE-37622-8 - Prompt user to change password before expiration' is set to 'between 5 and 14 days",
+        "policyType": "Custom",
+        "mode": "All",
+        "description": "This policy setting determines how far in advance users are warned that their password will expire",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "policyRule": {
+            "if": {
+                "allOf": [
+                    {
+                        "field": "type",
+                        "equals": "Microsoft.GuestConfiguration/guestConfigurationAssignments"
+                    },
+                    {
+                        "field": "name",
+                        "equals": "PromptChangePasswordExpiration"
+                    },
+                    {
+                        "field": "Microsoft.GuestConfiguration/guestConfigurationAssignments/complianceStatus",
+                        "notEquals": "Compliant"
+                    }
+                ]
+            },
+            "then": {
+                "effect": "audit"
+            }
+        }
+    },
+    "id": "/providers/Microsoft.Authorization/policyDefinitions/f1e1fe54-5fdb-46c0-acdf-57f4a926d90c",
+    "name": "f1e1fe54-5fdb-46c0-acdf-57f4a926d90c"
+}

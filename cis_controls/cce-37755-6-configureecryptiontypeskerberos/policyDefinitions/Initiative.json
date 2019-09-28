@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-37755-6 - Encryption types allowed for Kerberos: RC4_HMAC_MD5, AES128_HMAC_SHA1, AES256_HMAC_SHA1",
+        "policyType": "Custom",
+        "description": "This policy setting allows you to set the encryption types that Kerberos is allowed to use.The recommended state for this setting is: RC4_HMAC_MD5, AES128_HMAC_SHA1, AES256_HMAC_SHA1, Future encryption types.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e881a04a-cefa-4266-894b-5e281f90bf77",
+                "policyDefinitionReferenceId": "Deploy_ConfigureEncryptionTypesKerberos",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b5ec7e03-5b8f-467f-bff5-5bb15a08727b",
+                "policyDefinitionReferenceId": "Audit_ConfigureEncryptionTypesKerberos"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/67ca1a26-a51a-4e46-a794-73ac0d1b3a9e",
+    "name": "67ca1a26-a51a-4e46-a794-73ac0d1b3a9e"
+}

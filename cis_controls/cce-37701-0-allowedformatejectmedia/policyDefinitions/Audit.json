@@ -1,0 +1,34 @@
+{
+    "properties": {
+        "displayName": "[Audit] CIS - CCE-37701-0 - Devices: Allowed to format and eject removable media",
+        "policyType": "Custom",
+        "mode": "All",
+        "description": "This policy setting determines who is allowed to format and eject removable NTFS media.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "policyRule": {
+            "if": {
+                "allOf": [
+                    {
+                        "field": "type",
+                        "equals": "Microsoft.GuestConfiguration/guestConfigurationAssignments"
+                    },
+                    {
+                        "field": "name",
+                        "equals": "AllowedFormatEjectMedia"
+                    },
+                    {
+                        "field": "Microsoft.GuestConfiguration/guestConfigurationAssignments/complianceStatus",
+                        "notEquals": "Compliant"
+                    }
+                ]
+            },
+            "then": {
+                "effect": "audit"
+            }
+        }
+    },
+    "id": "/providers/Microsoft.Authorization/policyDefinitions/4e4a918a-1ac2-4e59-ad31-67528376ccc9",
+    "name": "4e4a918a-1ac2-4e59-ad31-67528376ccc9"
+}

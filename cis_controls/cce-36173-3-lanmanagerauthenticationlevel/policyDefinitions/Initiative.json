@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-36173-3 - LAN Manager authentication level",
+        "policyType": "Custom",
+        "description": "LAN Manager (LM) was a family of early Microsoft client/server software (predating Windows NT) that allowed users to link personal computers together on a single network.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/d258ecf1-e871-4ad3-b42c-e94ccee64629",
+                "policyDefinitionReferenceId": "Deploy_LANManagerAuthenticationLevel",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3090f621-7805-4f27-b3a2-62790dd9b83c",
+                "policyDefinitionReferenceId": "Audit_LANManagerAuthenticationLevel"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/37cb202e-b716-45ad-8fac-e584e50e2295",
+    "name": "37cb202e-b716-45ad-8fac-e584e50e2295"
+}

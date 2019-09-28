@@ -1,0 +1,34 @@
+{
+    "properties": {
+        "displayName": "[Audit] CIS - CCE-38235-8 - Machine inactivity limit' is set to '900 or fewer second(s), but not 0",
+        "policyType": "Custom",
+        "mode": "All",
+        "description": "Windows notices inactivity of a logon session, and if the amount of inactive time exceeds the inactivity limit, then the screen saver will run, locking the session.The recommended state for this setting is: 900 or fewer second(s), but not 0.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "policyRule": {
+            "if": {
+                "allOf": [
+                    {
+                        "field": "type",
+                        "equals": "Microsoft.GuestConfiguration/guestConfigurationAssignments"
+                    },
+                    {
+                        "field": "name",
+                        "equals": "MachineInactivityLimit"
+                    },
+                    {
+                        "field": "Microsoft.GuestConfiguration/guestConfigurationAssignments/complianceStatus",
+                        "notEquals": "Compliant"
+                    }
+                ]
+            },
+            "then": {
+                "effect": "audit"
+            }
+        }
+    },
+    "id": "/providers/Microsoft.Authorization/policyDefinitions/5260d1d2-e5fa-4b2a-a989-c3030e4b8de8",
+    "name": "5260d1d2-e5fa-4b2a-a989-c3030e4b8de8"
+}

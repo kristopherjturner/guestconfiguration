@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-37614-5 - Domain member: Require strong (Windows 2000 or later) session key",
+        "policyType": "Custom",
+        "description": "When this policy setting is enabled, a secure channel can only be established with domain controllers that are capable of encrypting secure channel data with a strong (128-bit) session key.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b3d96c93-4e02-4cdb-81ef-d3d0c5e79d00",
+                "policyDefinitionReferenceId": "Deploy_RequireStrongSessionKey",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9777d742-8a85-42c8-bb74-3e060bd853dd",
+                "policyDefinitionReferenceId": "Audit_RequireStrongSessionKey"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/4836d73c-20ab-4237-baa9-588c4865c70d",
+    "name": "4836d73c-20ab-4237-baa9-588c4865c70d"
+}

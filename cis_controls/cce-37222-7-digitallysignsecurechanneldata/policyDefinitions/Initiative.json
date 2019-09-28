@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-37222-7 - Domain member: Digitally sign secure channel data (when possible)",
+        "policyType": "Custom",
+        "description": "This policy setting determines whether a domain member should attempt to negotiate whether all secure channel traffic that it initiates must be digitally signed.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7c7c0cf2-b359-44cb-8bee-e6577b030e31",
+                "policyDefinitionReferenceId": "Deploy_DigitallySignSecureChannelData",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c65a78ca-8fb3-4e70-8bee-d1e8be0cc035",
+                "policyDefinitionReferenceId": "Audit_DigitallySignSecureChannelData"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/7be76069-0471-4f8f-a655-514f955a14f9",
+    "name": "7be76069-0471-4f8f-a655-514f955a14f9"
+}

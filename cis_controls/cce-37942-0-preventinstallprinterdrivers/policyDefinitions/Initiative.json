@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-37942-0 - Devices: Prevent Users from installing printer drivers",
+        "policyType": "Custom",
+        "description": "For a computer to print to a shared printer, the driver for that shared printer must be installed on the local computer.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ab568fbe-f6c1-41cc-85e2-9f495a9cce8d",
+                "policyDefinitionReferenceId": "Deploy_PreventInstallPrinterDrivers",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/224be2c9-0740-4960-80fa-53ef451ff270",
+                "policyDefinitionReferenceId": "Audit_PreventInstallPrinterDrivers"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/8848c522-b8f1-468c-9ae7-9227372cdcb2",
+    "name": "8848c522-b8f1-468c-9ae7-9227372cdcb2"
+}

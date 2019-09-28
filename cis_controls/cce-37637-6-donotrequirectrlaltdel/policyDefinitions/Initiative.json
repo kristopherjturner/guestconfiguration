@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-37637-6 - Interactive logon: Do not require CTRL+ALT+DEL' is set to 'Disabled",
+        "policyType": "Custom",
+        "description": "This policy setting determines whether users must press CTRL+ALT+DEL before they log on.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5e264f9b-e1bf-49a8-983d-bec8195b071d",
+                "policyDefinitionReferenceId": "Deploy_DoNotRequireCTRLALTDEL",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e482cb9b-7019-4b3a-bbc4-94c42e92dbee",
+                "policyDefinitionReferenceId": "Audit_DoNotRequireCTRLALTDEL"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/4a8843e1-0549-4949-92fa-aa2e3ee633ad",
+    "name": "4a8843e1-0549-4949-92fa-aa2e3ee633ad"
+}

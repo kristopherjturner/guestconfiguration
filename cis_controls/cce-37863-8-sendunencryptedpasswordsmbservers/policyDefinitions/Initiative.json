@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-37863-8 - Send unencrypted password to third-party SMB servers",
+        "policyType": "Custom",
+        "description": "This policy setting determines whether the SMB redirector will send plaintext passwords during authentication to third-party SMB servers that do not support password encryption",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0680bb01-abde-4d7f-ad03-10513e478cc8",
+                "policyDefinitionReferenceId": "Deploy_SendUnencryptedPasswordSMBServers",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/947472d0-241b-4a2d-9c30-ad479faef3aa",
+                "policyDefinitionReferenceId": "Audit_SendUnencryptedPasswordSMBServers"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/2d5d18b3-5e48-40d5-8a13-945020fc06c8",
+    "name": "2d5d18b3-5e48-40d5-8a13-945020fc06c8"
+}

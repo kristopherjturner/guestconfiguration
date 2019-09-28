@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-38333-1 - Interactive logon: Smart card removal behavior",
+        "policyType": "Custom",
+        "description": "This policy setting determines what happens when the smart card for a logged-on user is removed from the smart card reader",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6403e62b-4b7c-47e2-b599-b9e68c136cf8",
+                "policyDefinitionReferenceId": "Deploy_SmartCardRemovalBehavior",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/17807d75-7258-4b84-ad5d-0f77edd660ec",
+                "policyDefinitionReferenceId": "Audit_SmartCardRemovalBehavior"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/cede5e3d-a28c-440c-89f5-aee2cd908e2c",
+    "name": "cede5e3d-a28c-440c-89f5-aee2cd908e2c"
+}

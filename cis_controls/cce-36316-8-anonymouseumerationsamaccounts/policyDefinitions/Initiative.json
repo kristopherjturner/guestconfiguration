@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-36316-8 -  Do not allow anonymous enumeration of SAM accounts",
+        "policyType": "Custom",
+        "description": "This policy setting controls the ability of anonymous users to enumerate the accounts in the Security Accounts Manager (SAM).",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/dc945ab0-bce8-4816-94f3-016ab598c704",
+                "policyDefinitionReferenceId": "Deploy_AnonymousEnumerationSAMAccounts",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9617527c-94b4-42ec-8be8-812b78af46e5",
+                "policyDefinitionReferenceId": "Audit_AnonymousEnumerationSAMAccounts"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/bdd8da66-d5c5-4799-9ffd-6244a346b063",
+    "name": "bdd8da66-d5c5-4799-9ffd-6244a346b063"
+}

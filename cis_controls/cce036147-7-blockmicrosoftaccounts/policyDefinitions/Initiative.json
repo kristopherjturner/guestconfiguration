@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-36147-7 - Accounts: Block Microsoft Accounts",
+        "policyType": "Custom",
+        "description": "This policy setting prevents users from adding new Microsoft accounts on this computer.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0a2b8429-fa5a-42b5-90d5-6247319e55e5",
+                "policyDefinitionReferenceId": "Deploy_BlockMicrosoftAccounts",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/246a917d-c7e7-4a19-a6d0-fdc1ce3e5774",
+                "policyDefinitionReferenceId": "Audit_BlockMicrosoftAccounts"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/ce697fc4-3277-4302-90a4-a81a138154b6",
+    "name": "ce697fc4-3277-4302-90a4-a81a138154b6"
+}

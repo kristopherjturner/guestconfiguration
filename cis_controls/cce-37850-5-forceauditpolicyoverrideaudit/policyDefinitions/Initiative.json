@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-37850-5 - Audit: Force audit policy subcategory settings to override audit policy category settings",
+        "policyType": "Custom",
+        "description": "This policy setting allows administrators to enable the more precise auditing capabilities present in Windows Vista or later.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/510754e5-caf9-42b7-91d6-8489b1220442",
+                "policyDefinitionReferenceId": "Deploy_ForceAuditPolicyOverrideAudit",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/abdb34ab-0b73-46f2-a297-787bf08f8947",
+                "policyDefinitionReferenceId": "Audit_ForceAuditPolicyOverrideAudit"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/f53d9a31-fb87-4f8e-8492-35eef78d753f",
+    "name": "f53d9a31-fb87-4f8e-8492-35eef78d753f"
+}

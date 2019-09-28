@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-36056-0 - Interactive logon: Do not display last user name",
+        "policyType": "Custom",
+        "description": "This policy setting determines whether the account name of the last user to log on to the client computers in your organization will be displayed in each computer's respective Windows logon screen",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/072299cb-3b6e-4596-ab3c-e0cbbdb80045",
+                "policyDefinitionReferenceId": "Deploy_DoNotDisplayLastUserName",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/333b5d68-0d0c-4fc0-95a1-0f2562e4c7f2",
+                "policyDefinitionReferenceId": "Audit_DoNotDisplayLastUserName"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/5ce1fc14-dd19-4ee4-a924-4bb2d671fdf6",
+    "name": "5ce1fc14-dd19-4ee4-a924-4bb2d671fdf6"
+}

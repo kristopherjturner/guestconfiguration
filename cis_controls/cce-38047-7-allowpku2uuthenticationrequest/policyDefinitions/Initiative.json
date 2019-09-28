@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-38047-7 - Allow PKU2U authentication requests to this computer to use online identities",
+        "policyType": "Custom",
+        "description": "This setting determines if online identities are able to authenticate to this computer.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e5e2304b-282c-4baf-83c7-1933e881da99",
+                "policyDefinitionReferenceId": "Deploy_AllowPKU2UAuthenticationRequest",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/2818ea8d-cae2-4518-99de-19953f6bc663",
+                "policyDefinitionReferenceId": "Audit_AllowPKU2UAuthenticationRequest"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/ba574c36-6f01-4e08-a8b5-8fc1f94606de",
+    "name": "ba574c36-6f01-4e08-a8b5-8fc1f94606de"
+}
