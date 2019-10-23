@@ -1,0 +1,34 @@
+{
+    "properties": {
+        "displayName": "[Audit] CIS - CCE-36494-3 - Admin Approval Mode for the Built-in Administrator account",
+        "policyType": "Custom",
+        "mode": "All",
+        "description": "This policy setting controls the behavior of Admin Approval Mode for the built-in Administrator account.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "policyRule": {
+            "if": {
+                "allOf": [
+                    {
+                        "field": "type",
+                        "equals": "Microsoft.GuestConfiguration/guestConfigurationAssignments"
+                    },
+                    {
+                        "field": "name",
+                        "equals": "AdminApprovalMode"
+                    },
+                    {
+                        "field": "Microsoft.GuestConfiguration/guestConfigurationAssignments/complianceStatus",
+                        "notEquals": "Compliant"
+                    }
+                ]
+            },
+            "then": {
+                "effect": "audit"
+            }
+        }
+    },
+    "id": "/providers/Microsoft.Authorization/policyDefinitions/ea2dc775-9005-4706-b3b1-c5a180b17a29",
+    "name": "ea2dc775-9005-4706-b3b1-c5a180b17a29"
+}

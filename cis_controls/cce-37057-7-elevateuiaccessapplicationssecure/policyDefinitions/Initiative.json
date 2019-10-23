@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-37057-7 - Only elevate UIAccess applications that are installed in secure locations",
+        "policyType": "Custom",
+        "description": "This policy setting controls whether applications that request to run with a User Interface Accessibility (UIAccess) integrity level must reside in a secure location in the file system.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/47a48dd0-ed1f-4767-9835-1e922aeb9bcd",
+                "policyDefinitionReferenceId": "Deploy_ElevateUIAccessApplicationsSecure",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/df436ed9-702c-478b-9c10-be22da297c4b",
+                "policyDefinitionReferenceId": "Audit_ElevateUIAccessApplicationsSecure"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/3cf3b0c0-cbdc-46be-aa99-1c5bb08c19fd",
+    "name": "3cf3b0c0-cbdc-46be-aa99-1c5bb08c19fd"
+}

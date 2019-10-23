@@ -1,0 +1,34 @@
+{
+    "properties": {
+        "displayName": "[Audit] CIS - CCE-36864-7 -   Behavior of the elevation prompt for standard users",
+        "policyType": "Custom",
+        "mode": "All",
+        "description": "This policy setting controls the behavior of application installation detection for the computer.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "policyRule": {
+            "if": {
+                "allOf": [
+                    {
+                        "field": "type",
+                        "equals": "Microsoft.GuestConfiguration/guestConfigurationAssignments"
+                    },
+                    {
+                        "field": "name",
+                        "equals": "BehaviorElevationPrompt"
+                    },
+                    {
+                        "field": "Microsoft.GuestConfiguration/guestConfigurationAssignments/complianceStatus",
+                        "notEquals": "Compliant"
+                    }
+                ]
+            },
+            "then": {
+                "effect": "audit"
+            }
+        }
+    },
+    "id": "/providers/Microsoft.Authorization/policyDefinitions/45830b99-c8d3-4a9c-b8a6-eaedc73f145f",
+    "name": "45830b99-c8d3-4a9c-b8a6-eaedc73f145f"
+}

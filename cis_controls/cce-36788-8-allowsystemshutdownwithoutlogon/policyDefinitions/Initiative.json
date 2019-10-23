@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-36788-8 - Allow system to be shut down without having to log on",
+        "policyType": "Custom",
+        "description": "This policy setting determines whether a computer can be shut down when a user is not logged on.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b2b866a9-a4a7-4ad8-80d1-9331f608b4d3",
+                "policyDefinitionReferenceId": "Deploy_AllowSystemShutDownWithoutLogOn",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/2c07ce5b-a850-4384-a2a8-c6ec2a9a1203",
+                "policyDefinitionReferenceId": "Audit_AllowSystemShutDownWithoutLogOn"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/ed36ee41-6625-46ad-8d2a-a8cb0cadc008",
+    "name": "ed36ee41-6625-46ad-8d2a-a8cb0cadc008"
+}

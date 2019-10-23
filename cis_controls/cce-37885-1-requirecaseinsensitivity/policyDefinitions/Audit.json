@@ -1,0 +1,34 @@
+{
+    "properties": {
+        "displayName": "[Audit] CIS - CCE-37885-1 - Require Case Insensitivity for Non-Windows Subsystems",
+        "policyType": "Custom",
+        "mode": "All",
+        "description": "This policy setting determines whether case insensitivity is enforced for all subsystems.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "policyRule": {
+            "if": {
+                "allOf": [
+                    {
+                        "field": "type",
+                        "equals": "Microsoft.GuestConfiguration/guestConfigurationAssignments"
+                    },
+                    {
+                        "field": "name",
+                        "equals": "RequireCaseInsensitivity"
+                    },
+                    {
+                        "field": "Microsoft.GuestConfiguration/guestConfigurationAssignments/complianceStatus",
+                        "notEquals": "Compliant"
+                    }
+                ]
+            },
+            "then": {
+                "effect": "audit"
+            }
+        }
+    },
+    "id": "/providers/Microsoft.Authorization/policyDefinitions/ae26794b-9449-4726-b075-d7800f699463",
+    "name": "ae26794b-9449-4726-b075-d7800f699463"
+}

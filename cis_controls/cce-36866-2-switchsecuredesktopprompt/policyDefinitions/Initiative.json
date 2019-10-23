@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-36866-2 -  Switch to the secure desktop when prompting for elevation",
+        "policyType": "Custom",
+        "description": "This policy setting controls whether the elevation request prompt is displayed on the interactive user's desktop or the secure desktop.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/81f3dce7-ce32-481d-899f-3a51b47e77ab",
+                "policyDefinitionReferenceId": "Deploy_SwitchSecureDesktopPrompt",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f8b8f3ab-24a2-4bfc-9bf1-6bebce69d437",
+                "policyDefinitionReferenceId": "Audit_SwitchSecureDesktopPrompt"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/c66e0308-8966-4cff-a08f-f73f4fba3d79",
+    "name": "c66e0308-8966-4cff-a08f-f73f4fba3d79"
+}

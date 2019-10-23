@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-36533-8 -  Detect application installations and prompt for elevation",
+        "policyType": "Custom",
+        "description": "This policy setting controls the behavior of application installation detection for the computer.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/d5dc0e85-36f7-49c4-b4fc-628e0de48651",
+                "policyDefinitionReferenceId": "Deploy_DetectApplicationInstallations",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/93a9c15a-490e-4de7-9a99-71904ac839f7",
+                "policyDefinitionReferenceId": "Audit_DetectApplicationInstallations"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/2b533de0-c8d1-4a5f-bd33-7252c3a088ec",
+    "name": "2b533de0-c8d1-4a5f-bd33-7252c3a088ec"
+}

@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-37644-2 - Strengthen default permissions of internal system objects",
+        "policyType": "Custom",
+        "description": "This policy setting determines the strength of the default discretionary access control list (DACL) for objects.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/127e0462-c8ee-40cf-bcd4-720231d1bf27",
+                "policyDefinitionReferenceId": "Deploy_StrengthenDefaultPermissions",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/94ec45be-051e-4c5f-bbac-6c298741cc11",
+                "policyDefinitionReferenceId": "Audit_StrengthenDefaultPermissions"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/497fc8ac-ffa7-4925-a4a9-87f648a344f3",
+    "name": "497fc8ac-ffa7-4925-a4a9-87f648a344f3"
+}

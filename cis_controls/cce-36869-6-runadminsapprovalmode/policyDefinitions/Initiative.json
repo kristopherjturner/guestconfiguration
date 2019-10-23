@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "displayName": "[Initiative] CIS - CCE-36869-6 -  Run all administrators in Admin Approval Mode",
+        "policyType": "Custom",
+        "description": "This policy setting controls the behavior of all User Account Control (UAC) policy settings for the computer. If you change this policy setting, you must restart your computer.",
+        "metadata": {
+            "category": "Guest Configuration"
+        },
+        "parameters": {},
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0be0e67e-4907-4d67-a887-7aee032c372b",
+                "policyDefinitionReferenceId": "Deploy_RunAdminsApprovalMode",
+                "parameters": {}
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/187f7a6b-8ad9-493f-9df1-d699a7116bc4",
+                "policyDefinitionReferenceId": "Audit_RunAdminsApprovalMode"
+            }
+        ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/fe2143db-c6e3-4a32-9bd6-4c421921ebbe",
+    "name": "fe2143db-c6e3-4a32-9bd6-4c421921ebbe"
+}
